@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1607121420 source:c:\users\computer\desktop\trainer conversione alfanumerico\trainer conversione alfanumerica\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"gestorefile.h"
+
+1607117423 source:c:\users\computer\desktop\trainer conversione alfanumerico\trainer conversione alfanumerica\gestorefile.c
+	"gestorefile.h"
+
+1607116799 c:\users\computer\desktop\trainer conversione alfanumerico\trainer conversione alfanumerica\gestorefile.h
+	<stdio.h>
+	<stdbool.h>
+
+1607117423 source:c:\users\computer\desktop\trainer conversione alfanumerica\gestorefile.c
+	"gestorefile.h"
+
+1607116799 c:\users\computer\desktop\trainer conversione alfanumerica\gestorefile.h
+	<stdio.h>
+	<stdbool.h>
+
+1608559056 source:c:\users\computer\desktop\trainer conversione alfanumerica\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"gestorefile.h"
+
