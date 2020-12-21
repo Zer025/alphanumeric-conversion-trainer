@@ -175,25 +175,29 @@ void memoNum()
 
     puts("\n----- Memorizza il numero -----");
 
-    int numLen = leggiNumLen();
+    unsigned int numLen = leggiNumLen();
 
     // Genera numero randomico
     srand(time(0));
     int r; // Numero randomico 1-9 / 0-9
-    char buffer; // Numero randomico ma in char
+    //char buffer; // Numero randomico ma in char
 
     // Scrivi prima cifra != 0
     r = 1 + rand() % 9;    // min + rand() % (max - min + 1)
-    buffer = r + '0';   // int to char
-    numero[0] = buffer;
+    //buffer = r + '0';   // int to char
+
+    //numero[0] = buffer;
+    numero[0] = r + '0';
 
     // Scrivi cifre restanti
     for (int i = 1; i < numLen; i++) {
         r = rand() % 10;    // min + rand() % (max - min + 1)
-        buffer = r + '0';   // int to char
+        //buffer = r + '0';   // int to char
 
-        numero[i] = buffer;
+        //numero[i] = buffer;
+        numero[i] = r + '0';
     }
+    numero[numLen] = '\0';
 
     // Stampa numero
     puts("");
@@ -211,6 +215,9 @@ void memoNum()
     printf("? ");
     scanf("%s", temp);
 
+    printf("numero: %s\n", numero);
+    printf("temp: %s\n", temp);
+
     // Verifica numero
     if(strcmp(numero, temp) == 0) {
         printf("\nBrevo\n");
@@ -220,15 +227,15 @@ void memoNum()
 }
 
 int leggiNumLen() {
-    int numLen;
+    unsigned int numLen;
 
-    printf("Inserisci la lunghezza del numero: ");
-    scanf("%d", &numLen);
+    printf("Inserisci la lunghezza del numero (max 100): ");
+    scanf("%u", &numLen);
     fflush(stdin);
 
     while(numLen < 1 || numLen > 100) {
         printf("Valore non valido. Riscrivi: ");
-        scanf("%d", &numLen);
+        scanf("%u", &numLen);
         fflush(stdin);
     }
     return numLen;
